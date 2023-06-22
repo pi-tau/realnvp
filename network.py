@@ -2,7 +2,9 @@ import torch.nn as nn
 
 
 class WeightNormConv2d(nn.Module):
-    """Same as Conv2d but with weight normalization."""
+    """Same as Conv2d but with weight normalization.
+    https://arxiv.org/abs/1602.07868
+    """
 
     def __init__(self, in_channels, out_channels, kernel_size, **kwargs):
         """Init a weight normalized Conv2d layer.
